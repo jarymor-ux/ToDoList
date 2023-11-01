@@ -27,6 +27,7 @@ public class Config extends WebSecurityConfigurerAdapter {
                     .antMatchers("/").hasAnyRole("ADMIN", "USER")
                     .antMatchers("/home").hasAnyRole("ADMIN","USER")
                     .antMatchers("/admin_panel").hasRole("ADMIN")
+                    .antMatchers("/addNewUser").hasAnyRole("ADMIN", "USER")
                     .and().formLogin().permitAll();
     }
 }
